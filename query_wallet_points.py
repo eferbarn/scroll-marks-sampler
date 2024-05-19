@@ -30,7 +30,7 @@ def sort_csv_by_numeric_column(input_file, output_file, sort_column):
     for row in data:
         row[sort_column] = float(row[sort_column])
 
-    data.sort(key=lambda x: x[sort_column])
+    data.sort(key=lambda x: x[sort_column], reverse=True)
 
     with open(output_file, 'w', newline='') as outfile:
         writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
