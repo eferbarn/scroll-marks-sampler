@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Check commit message
       id: check_commit
-      run: echo "::set-output name=skip::$(if [[ ${{ github.event.head_commit.message }} =~ '^\[Auto\]' ]]; then echo 'true'; else echo 'false'; fi)"
+      run: echo "::set-output name=skip::$(if [[ 'Updated the automation process' =~ ^\[Auto\] ]]; then echo 'true'; else echo 'false'; fi)"
 
     - name: Skip if commit message starts with '[Auto]'
       if: steps.check_commit.outputs.skip == 'true'
