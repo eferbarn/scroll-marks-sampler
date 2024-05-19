@@ -46,12 +46,12 @@ jobs:
         name: results
         path: ./results.json
 
-    # - name: Commit and push changes
-    #   env:
-    #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   run: |
-    #     git config --global user.name "github-actions[bot]"
-    #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    #     git add results.json
-    #     git commit -m "[Auto] Update results.json"
-    #     git push "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
+    - name: Commit and push changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add results.json
+        git commit -m "[Auto] Update results.json"
+        git push "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
