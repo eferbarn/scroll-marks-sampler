@@ -25,7 +25,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
-        pip install dotenv
 
     - name: Run query script
       run: python query_wallet_points.py
