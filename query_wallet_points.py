@@ -27,7 +27,7 @@ def sort_csv(input_file, output_file, sort_key):
         reader = csv.DictReader(infile)
         data = list(reader)
 
-    data.sort(key=lambda x: x[sort_key])
+    data.sort(key=lambda x: x[sort_key], reverse=True)
 
     with open(output_file, 'w', newline='') as outfile:
         writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
@@ -84,7 +84,7 @@ def main():
 
         index += 1
     
-    sort_csv(result_file_path, result_file_path, 'points')
+    sort_csv(result_file_path, result_file_path, 'point')
     csv_to_json(result_file_path, './results.json')
     print(f"Copied {result_file_path} to ./results.json")
 
