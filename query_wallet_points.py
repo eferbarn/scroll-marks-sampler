@@ -22,6 +22,22 @@ with open('./addresses.csv', 'w') as file:
     file.write(response)
 
 
+def sort_csv_by_numeric_column(input_file, output_file, sort_column):
+    with open(input_file, 'r', newline='') as infile:
+        reader = csv.DictReader(infile)
+        data = list(reader)
+
+    for row in data:
+        row[sort_column] = float(row[sort_column])
+
+    data.sort(key=lambda x: x[sort_column])
+
+    with open(output_file, 'w', newline='') as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
+
+
 def sort_csv(input_file, output_file, sort_key):
     with open(input_file, 'r', newline='') as infile:
         reader = csv.DictReader(infile)
@@ -84,7 +100,7 @@ def main():
 
         index += 1
     
-    sort_csv(result_file_path, result_file_path, 'point')
+    sort_csv_by_numeric_column(result_file_path, result_file_path, 'point')
     csv_to_json(result_file_path, './results.json')
     print(f"Copied {result_file_path} to ./results.json")
 
