@@ -12,7 +12,7 @@ print(f"::set-output name=timestamp::{timestamp}")
 load_dotenv()
 API_KEY = os.getenv('DUNE_API_KEY')
 cooldown = 0.01 # in seconds
-limit = 5
+limit = 1000
 
 url = f'https://api.dune.com/api/v1/query/3745025/results/csv?limit={limit}'
 headers = {"X-Dune-API-Key": API_KEY}
