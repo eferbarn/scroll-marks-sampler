@@ -1,0 +1,4 @@
+.env
+Private/
+build/
+.DS_Store
