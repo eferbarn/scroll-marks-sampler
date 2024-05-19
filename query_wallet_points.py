@@ -1,11 +1,23 @@
 # %%
 import requests
 import time
+import os
 import csv
 import json
-import shutil
+from dotenv import load_dotenv
 
+load_dotenv()
+API_KEY = os.getenv('DUNE_API_KEY')
 cooldown = 0.01 # in seconds
+limit = 5
+
+url = f'https://api.dune.com/api/v1/query/3745025/results/csv?limit={limit}'
+headers = {"X-Dune-API-Key": API_KEY}
+response = requests.get(url, headers=headers).text
+
+with open('./addresses.csv', 'w') as file:
+    file.write(response)
+
 
 def csv_to_json(csv_file_path, json_file_path):
     data = []
@@ -33,7 +45,7 @@ def main():
 
 
     index = 1
-    for address in addresses[1:]:
+    for address in addresses[1:limit + 1]:
         address = address.strip()
 
         if index%100 == 0:
