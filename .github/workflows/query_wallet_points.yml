@@ -36,15 +36,10 @@ jobs:
         pip install python-dotenv
 
     - name: Run query and copy script
+      id: driver
       env:
         DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
       run: python query_wallet_points.py
-
-    - name: Upload result file
-      uses: actions/upload-artifact@v2
-      with:
-        name: results
-        path: ./results.json
 
     - name: Commit and push changes
       env:
@@ -53,5 +48,5 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add *
-        git commit -m "[Auto] Update results.json"
+        git commit -m "[Auto] Update results.json (${{ steps.driver.outputs.timestamp }})"
         git push "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main

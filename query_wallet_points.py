@@ -6,6 +6,9 @@ import csv
 import json
 from dotenv import load_dotenv
 
+timestamp = int(time.time())
+print(f"::set-output name=timestamp::{timestamp}")
+
 load_dotenv()
 API_KEY = os.getenv('DUNE_API_KEY')
 cooldown = 0.01 # in seconds
@@ -35,7 +38,6 @@ def query_wallet_points(address):
     return response.json()
 
 def main():
-    timestamp = int(time.time())
     result_file_path = f'./results/results-{timestamp}.csv'
     with open(result_file_path, 'a') as file:
         file.write('address,point,timestamp\n')
