@@ -9,7 +9,7 @@ from dune_client.types import QueryParameter
 from dune_client.client import DuneClient
 from dune_client.query import Query
 
-limit = 10
+limit = 50000
 cooldown = 0.01
 dune_query_id = 3745025
 load_dotenv()
