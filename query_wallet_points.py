@@ -5,21 +5,47 @@ import os
 import csv
 import json
 from dotenv import load_dotenv
+from dune_client.types import QueryParameter
+from dune_client.client import DuneClient
+from dune_client.query import Query
+
+limit = 10
+cooldown = 0.01
+dune_query_id = 3745025
+load_dotenv()
+API_KEY = os.getenv('DUNE_API_KEY')
 
 timestamp = int(time.time())
 print(f"::set-output name=timestamp::{timestamp}")
 
-load_dotenv()
-API_KEY = os.getenv('DUNE_API_KEY')
-cooldown = 0.01 # in seconds
-limit = 1000
+def dune_query(id, limit):
+    dune = DuneClient(
+        api_key=API_KEY
+    )
+    dune.DEFAULT_TIMEOUT = 300
 
-url = f'https://api.dune.com/api/v1/query/3745025/results/csv?limit={limit}'
-headers = {"X-Dune-API-Key": API_KEY}
-response = requests.get(url, headers=headers).text
+    query = Query(
+        query_id=id,
+        params=[
+            QueryParameter.text_type(
+                name='limit', value=f'{limit}'
+            )
+        ],
+    )
 
-with open('./addresses.csv', 'w') as file:
-    file.write(response)
+    response = dune.execute(query)
+    target = 'ExecutionState.COMPLETED'
+
+    while str(dune.get_status(response.execution_id)) != target:
+        time.sleep(1)
+
+    print('Execution completed!')
+
+    dune.get_result(response.execution_id)
+
+    result = dune.get_result(response.execution_id).result.rows
+
+    return result
 
 
 def sort_csv_by_numeric_column(input_file, output_file, sort_column):
@@ -69,6 +95,15 @@ def query_wallet_points(address):
 
 
 def main():
+    addresses = dune_query(dune_query_id, limit)
+
+    with open('./addresses.csv', 'w') as file:
+        content = '\n'.join(map(
+            lambda x: x.get('address'),
+            addresses
+        ))
+        file.write(content)
+
     result_file_path = f'./results/results-{timestamp}.csv'
     with open(result_file_path, 'a') as file:
         file.write('address,point,timestamp\n')
