@@ -34,7 +34,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         pip install python-dotenv
-        pip install dune-client
+        pip install dune-client==0.3.0
 
     - name: Run query and copy script
       id: driver
