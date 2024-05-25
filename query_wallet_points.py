@@ -104,7 +104,7 @@ def main():
         ))
         file.write(content)
 
-    result_file_path = f'./results/results-{timestamp}.csv'
+    result_file_path = f'./historical_data/results-{timestamp}.csv'
     with open(result_file_path, 'a') as file:
         file.write('address,point,timestamp\n')
 
