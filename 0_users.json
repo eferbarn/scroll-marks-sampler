@@ -1,15 +1,15 @@
 [
     {
-        "all_tx_fee": 90.05728376956259,
-        "cumulative_new_users": 2200592,
+        "all_tx_fee": 90.29364475572129,
+        "cumulative_new_users": 2200671,
         "date_time": "2024-06-01 00:00:00.000 UTC",
-        "returning_users": 361952,
-        "total_active_users": 387191,
-        "total_new_users": 25239,
-        "txs": 2279445
+        "returning_users": 362693,
+        "total_active_users": 388011,
+        "total_new_users": 25318,
+        "txs": 2285764
     },
     {
-        "all_tx_fee": 680.1605652626392,
+        "all_tx_fee": 680.1605652626383,
         "cumulative_new_users": 2175353,
         "date_time": "2024-05-01 00:00:00.000 UTC",
         "returning_users": 928769,
@@ -18,7 +18,7 @@
         "txs": 10995938
     },
     {
-        "all_tx_fee": 1959.716108541024,
+        "all_tx_fee": 1959.7161085410216,
         "cumulative_new_users": 2004090,
         "date_time": "2024-04-01 00:00:00.000 UTC",
         "returning_users": 925041,
@@ -27,7 +27,7 @@
         "txs": 8821687
     },
     {
-        "all_tx_fee": 3521.8848544871544,
+        "all_tx_fee": 3521.884854487159,
         "cumulative_new_users": 1835478,
         "date_time": "2024-03-01 00:00:00.000 UTC",
         "returning_users": 848631,
@@ -36,7 +36,7 @@
         "txs": 10061465
     },
     {
-        "all_tx_fee": 2296.4530213818007,
+        "all_tx_fee": 2296.4530213818016,
         "cumulative_new_users": 1641797,
         "date_time": "2024-02-01 00:00:00.000 UTC",
         "returning_users": 552192,
@@ -45,7 +45,7 @@
         "txs": 7176974
     },
     {
-        "all_tx_fee": 1037.2510676544543,
+        "all_tx_fee": 1037.2510676544541,
         "cumulative_new_users": 1380046,
         "date_time": "2024-01-01 00:00:00.000 UTC",
         "returning_users": 543934,
@@ -54,7 +54,7 @@
         "txs": 4857519
     },
     {
-        "all_tx_fee": 1674.090754365705,
+        "all_tx_fee": 1674.0907543657024,
         "cumulative_new_users": 1287983,
         "date_time": "2023-12-01 00:00:00.000 UTC",
         "returning_users": 697468,
@@ -63,7 +63,7 @@
         "txs": 4337003
     },
     {
-        "all_tx_fee": 1311.8132849968113,
+        "all_tx_fee": 1311.8132849968165,
         "cumulative_new_users": 1080553,
         "date_time": "2023-11-01 00:00:00.000 UTC",
         "returning_users": 146557,
@@ -72,7 +72,7 @@
         "txs": 4189842
     },
     {
-        "all_tx_fee": 420.08955209124485,
+        "all_tx_fee": 420.08955209124434,
         "cumulative_new_users": 268685,
         "date_time": "2023-10-01 00:00:00.000 UTC",
         "returning_users": 0,
