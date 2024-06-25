@@ -34,6 +34,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         pip install python-dotenv
+        pip install pandas
+        pip install numpy
+        pip install matplotlib
         pip install dune-client==0.3.0
 
     - name: Dune Data Grabber
@@ -54,7 +57,9 @@ jobs:
 
     - name: Driver code
       id: driver
-      run: python query_wallet_points.py
+      run:
+        python query_wallet_points.py
+        python analyzer.py
 
     - name: Commit and push changes
       env:

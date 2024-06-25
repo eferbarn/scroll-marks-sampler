@@ -1,3 +1,5 @@
 {
-  "Address_Limit": 10
+  "Address_Limit": 10,
+  "Outlier_Factor": 0.01,
+  "Cooldown": 0.01
 }

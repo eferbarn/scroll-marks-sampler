@@ -52,7 +52,7 @@ with open('./configs.json', 'r') as file:
     configs = json.load(file)
 
 # Querying Active Addresses on the network
-limit = configs['Address_Limit']
+limit = configs['Address_Limit'] + 1
 dune_query_id = 3745025
 addresses = dune_query(dune_query_id, limit=limit)
 with open('./addresses.csv', 'w') as file:
@@ -65,7 +65,7 @@ with open('./addresses.csv', 'w') as file:
 # Querying New vs Returning Wallets
 dune_query_id=3809972
 users = dune_query(dune_query_id)
-with open('./0_users.json', 'w') as file:
+with open('./assets/Users.json', 'w') as file:
     json.dump(users, file, indent=4)
 
 # Querying Users active days - Used Contracts Overlap
@@ -84,8 +84,8 @@ for row in overlap:
     total_sum = sum(value for key, value in row.items() if key != 'days_category')
     # Add the "Sum" key to the dictionary
     row['Sum'] = total_sum
-with open('./1_overlap.json', 'w') as file:
+with open('./assets/Overlap.json', 'w') as file:
     json.dump(overlap, file, indent=4)
-with open('./2_contracts.json', 'w') as json_file:
+with open('./assets/Contracts.json', 'w') as json_file:
     json.dump(contracts, json_file, indent=4)
 # %%

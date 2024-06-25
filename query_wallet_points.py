@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 with open('./configs.json', 'r') as file:
     configs = json.load(file)
-limit = configs['Address_Limit']
-cooldown = 0.01
+limit = configs['Address_Limit'] + 1
+cooldown = configs['Cooldown']
 
 timestamp = int(time.time())
 print(f"::set-output name=timestamp::{timestamp}")
