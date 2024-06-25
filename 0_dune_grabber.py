@@ -45,7 +45,7 @@ def dune_query(id, **kwargs):
 timestamp = int(time.time())
 print(f"::set-output name=timestamp::{timestamp}")
 
-load_dotenv()
+load_dotenv () # load_dotenv('./Private/.env')
 API_KEY = os.getenv('DUNE_API_KEY')
 
 with open('./configs.json', 'r') as file:
@@ -53,6 +53,7 @@ with open('./configs.json', 'r') as file:
 
 # Querying Active Addresses on the network
 limit = configs['Address_Limit'] + 1
+cooldown = configs['Dune_Cooldown']
 dune_query_id = 3745025
 addresses = dune_query(dune_query_id, limit=limit)
 with open('./addresses.csv', 'w') as file:
@@ -62,12 +63,15 @@ with open('./addresses.csv', 'w') as file:
     ))
     file.write(content)
 
+time.sleep(cooldown)
+
 # Querying New vs Returning Wallets
 dune_query_id=3809972
 users = dune_query(dune_query_id)
 with open('./assets/Users.json', 'w') as file:
     json.dump(users, file, indent=4)
 
+time.sleep(cooldown)
 # Querying Users active days - Used Contracts Overlap
 dune_query_id=3724566
 overlap = dune_query(dune_query_id)

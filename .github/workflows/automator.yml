@@ -43,7 +43,7 @@ jobs:
       id: dune
       env:
         DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
-      run: python dune_grabber.py
+      run: python 0_dune_grabber.py
 
     - name: Commit and push changes
       env:
@@ -58,8 +58,8 @@ jobs:
     - name: Driver code
       id: driver
       run:
-        python query_wallet_points.py
-        python analyzer.py
+        python 1_query_wallet_points.py
+        python 2_analyzer.py
 
     - name: Commit and push changes
       env:
