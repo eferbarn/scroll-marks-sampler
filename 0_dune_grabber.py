@@ -72,6 +72,7 @@ with open('./assets/Users.json', 'w') as file:
     json.dump(users, file, indent=4)
 
 time.sleep(cooldown)
+
 # Querying Users active days - Used Contracts Overlap
 dune_query_id=3724566
 overlap = dune_query(dune_query_id)

@@ -57,9 +57,11 @@ jobs:
 
     - name: Driver code
       id: driver
-      run:
-        python 1_query_wallet_points.py
-        python 2_analyzer.py
+      run: python 1_query_wallet_points.py
+
+    - name: Analyzer module
+      id: analyzer
+      run: python 2_analyzer.py
 
     - name: Commit and push changes
       env:
