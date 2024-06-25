@@ -56,7 +56,7 @@ limit = configs['Address_Limit'] + 1
 cooldown = configs['Dune_Cooldown']
 dune_query_id = 3745025
 addresses = dune_query(dune_query_id, limit=limit)
-with open('./Assets/Addresses.csv', 'w') as file:
+with open('./assets/Addresses.csv', 'w') as file:
     content = '\n'.join(map(
         lambda x: x.get('address'),
         addresses
