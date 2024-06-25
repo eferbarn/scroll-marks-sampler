@@ -6,7 +6,7 @@ import csv
 import json
 from dotenv import load_dotenv
 
-with open('./configs.json', 'r') as file:
+with open('./configs/configs.json', 'r') as file:
     configs = json.load(file)
 limit = configs['Address_Limit'] + 1
 cooldown = configs['Cooldown']
@@ -66,7 +66,7 @@ def main():
     with open(result_file_path, 'a') as file:
         file.write('address,point,timestamp\n')
 
-    with open('addresses.csv', 'r') as file:
+    with open('./assets/Addresses.csv', 'r') as file:
         addresses = file.readlines()
 
 
@@ -94,8 +94,8 @@ def main():
         index += 1
     
     sort_csv_by_numeric_column(result_file_path, result_file_path, 'point')
-    csv_to_json(result_file_path, './results.json')
-    print(f"Copied {result_file_path} to ./results.json")
+    csv_to_json(result_file_path, './assets/Results.json')
+    print(f"Copied {result_file_path} to ./assets/Results.json")
 
 
 if __name__ == "__main__":

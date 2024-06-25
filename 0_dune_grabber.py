@@ -48,7 +48,7 @@ print(f"::set-output name=timestamp::{timestamp}")
 load_dotenv () # load_dotenv('./Private/.env')
 API_KEY = os.getenv('DUNE_API_KEY')
 
-with open('./configs.json', 'r') as file:
+with open('./configs/configs.json', 'r') as file:
     configs = json.load(file)
 
 # Querying Active Addresses on the network
@@ -56,7 +56,7 @@ limit = configs['Address_Limit'] + 1
 cooldown = configs['Dune_Cooldown']
 dune_query_id = 3745025
 addresses = dune_query(dune_query_id, limit=limit)
-with open('./addresses.csv', 'w') as file:
+with open('./Assets/Addresses.csv', 'w') as file:
     content = '\n'.join(map(
         lambda x: x.get('address'),
         addresses

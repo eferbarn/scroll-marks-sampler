@@ -14,7 +14,7 @@ def rzero(number):
     result = str(number)
     return result.rjust(zeroes, '0')
 
-with open('./configs.json', 'r') as file:
+with open('./configs/configs.json', 'r') as file:
     configs = json.load(file)
 ot_factor = configs['Outlier_Factor']
 
@@ -104,7 +104,6 @@ freq, bins = np.histogram(
 total_freqs = np.sum(freq)
 portion_of_freqs = (freq / total_freqs) * 100
 
-# Create a DataFrame with bins, frequencies, and portion of frequencies
 freq_df = pd.DataFrame({
     'Marks': bins[1:],
     'Frequency': freq,
@@ -179,15 +178,15 @@ plt.figure(figsize=(10, 4))
 plt.boxplot(
     df_filtered['point'], 
     vert = False,
-    patch_artist=True,  # Use filled boxes
-    showmeans=True,  # Do not show the mean
-    showfliers=False,  # Show outliers
-    notch=False,  # Do not show the notch
-    widths=0.7,  # Width of the boxes
-    boxprops=dict(facecolor='lightblue'),  # Box color
-    whiskerprops=dict(color='gray', linewidth=1.5),  # Whisker color and width
-    capprops=dict(color='gray', linewidth=1.5),  # Cap color and width
-    medianprops=dict(color='darkblue', linewidth=2)  # Median color and width,
+    patch_artist=True,
+    showmeans=True,
+    showfliers=False,
+    notch=False,
+    widths=0.7,
+    boxprops=dict(facecolor='lightblue'),
+    whiskerprops=dict(color='gray', linewidth=1.5),
+    capprops=dict(color='gray', linewidth=1.5),
+    medianprops=dict(color='darkblue', linewidth=2)
 )
 plt.axvline(
     descriptive_stats['mean'],
