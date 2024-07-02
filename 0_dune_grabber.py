@@ -68,9 +68,6 @@ time.sleep(cooldown)
 # Querying New vs Returning Wallets
 dune_query_id=3809972
 users = dune_query(dune_query_id)
-with open('./assets/Users.json', 'w') as file:
-    json.dump(users, file, indent=4)
-
 time.sleep(cooldown)
 
 # Querying Users active days - Used Contracts Overlap
@@ -89,8 +86,45 @@ for row in overlap:
     total_sum = sum(value for key, value in row.items() if key != 'days_category')
     # Add the "Sum" key to the dictionary
     row['Sum'] = total_sum
+
+# Save users data
+with open('./assets/Users.json', 'w') as file:
+    json.dump(users, file, indent=4)
+
+markdown_table = "| Date | All TX Fee | Cumulative New Users | Returning Users | Total Active Users | Total New Users | TXs |\n"
+markdown_table += "|------|------------|----------------------|-----------------|--------------------|-----------------|-----|\n"
+
+for entry in users:
+    row = f"| {entry['date_time']} | {entry['all_tx_fee']} | {entry['cumulative_new_users']} | {entry['returning_users']} | {entry['total_active_users']} | {entry['total_new_users']} | {entry['txs']} |\n"
+    markdown_table += row
+
+with open('./markdown/Users.md', 'w') as f:
+    f.write(markdown_table)
+
+# Save overlap data    
 with open('./assets/Overlap.json', 'w') as file:
     json.dump(overlap, file, indent=4)
+
+markdown_table = "| Days Category | 01 contract | 02 contracts | 03-05 contracts | 06-10 contracts | 11-20 contracts | 21-50 contracts | 51-100 contracts | Over 100 contracts | Sum   |\n"
+markdown_table += "|---------------|-------------|--------------|-----------------|-----------------|-----------------|-----------------|------------------|--------------------|-------|\n"
+
+for entry in overlap:
+    row = f"| {entry['days_category']} | {entry['01 contract']} | {entry['02 contracts']} | {entry['03-05 contracts']} | {entry['06-10 contracts']} | {entry['11-20 contracts']} | {entry['21-50 contracts']} | {entry['51-100 contracts']} | {entry['Over 100 contracts']} | {entry['Sum']} |\n"
+    markdown_table += row
+
+with open('./markdown/Overlap.md', 'w') as f:
+    f.write(markdown_table)
+
+# Save contracts data
 with open('./assets/Contracts.json', 'w') as json_file:
     json.dump(contracts, json_file, indent=4)
+
+markdown_table = "| Contracts          | Count   |\n"
+markdown_table += "|--------------------|---------|\n"
+for contract, count in contracts.items():
+    markdown_table += f"| {contract} | {count} |\n"
+
+with open('./markdown/Contracts.md', 'w') as f:
+    f.write(markdown_table)
+
 # %%

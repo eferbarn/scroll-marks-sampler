@@ -43,7 +43,7 @@ df_sorted = merged_df.sort_values(by='point').reset_index(drop=True)
 n = len(df_sorted)
 n_to_remove = int(ot_factor * n)
 
-# Remove outliers (top and bottom 5%)
+# Remove outliers (top and bottom n%)
 df_filtered = df_sorted.iloc[n_to_remove:-n_to_remove]
 
 descriptive_stats = df_filtered['point'].describe()
@@ -51,6 +51,20 @@ descriptive_stats.to_json('./assets/Descriptive.json', indent=4)
 
 print("Descriptive Statistics:")
 print(descriptive_stats, end='\n--------------\n')
+
+
+markdown_table = f"**{int(descriptive_stats['count'])}** addresses have " + "been analyzed through the latest run.\n"
+markdown_table += "The average mark score was " \
+f"**~{int(descriptive_stats['mean'])}**.\n"
+markdown_table += "| Statistic | Value |\n"
+markdown_table += "|-----------|-------|\n"
+
+for key, value in descriptive_stats.items():
+    row = f"| {key} | {value} |\n"
+    markdown_table += row
+
+with open('./markdown/Descriptive.md', 'w') as f:
+    f.write(markdown_table)
 
 # Divide into 10 categories based on index
 num_categories = 9
@@ -84,6 +98,17 @@ category_df = pd.DataFrame({
 category_df.to_json('./assets/Ranks.json', indent=4)
 print(category_df, end='\n--------------\n')
 
+markdown_table = "| Rank | Category | Average Marks |\n"
+markdown_table += "|------|----------|---------------|\n"
+for i in range(len(category_df['Rank'])):
+    rank = category_df['Rank'][i]
+    category = category_df['Category'][i]
+    average_marks = category_df['Average Marks'][i]
+    markdown_table += f"| {rank} | {category} | {average_marks:.10f} |\n"
+
+with open('./markdown/Ranks.md', 'w') as f:
+    f.write(markdown_table)
+
 axis_bins = list(
     range(
         0,
@@ -111,8 +136,17 @@ freq_df = pd.DataFrame({
 })
 
 freq_df.to_json('./assets/Histogram.json', indent=4)
-
 print(freq_df, end='\n--------------\n')
+
+markdown_table = "| Marks | Frequency | Freq. Portion |\n"
+markdown_table += "|-------|-----------|---------------|\n"
+
+for index in range(len(freq_df["Marks"])):
+    row = f"| {freq_df['Marks'][index]} | {freq_df['Frequency'][index]} | {freq_df['Freq. Portion'][index]} |\n"
+    markdown_table += row
+
+with open('./markdown/Histogram.md', 'w') as f:
+    f.write(markdown_table)
 
 # Distribution Analysis
 plt.figure(figsize=(10, 6))
