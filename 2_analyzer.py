@@ -47,7 +47,18 @@ n_to_remove = int(ot_factor * n)
 df_filtered = df_sorted.iloc[n_to_remove:-n_to_remove]
 
 descriptive_stats = df_filtered['point'].describe()
-descriptive_stats.to_json('./assets/Descriptive.json', indent=4)
+stats_dict = descriptive_stats.to_dict()
+
+descriptive_new_schema = {
+    "error": None,
+    "data": {
+        "rows": [stats_dict]
+    },
+    "status": "ok"
+}
+descriptive_json_output = json.dumps(descriptive_new_schema, indent=4)
+with open('./assets/Descriptive.json', 'w') as json_file:
+    json_file.write(descriptive_json_output)
 
 print("Descriptive Statistics:")
 print(descriptive_stats, end='\n--------------\n')
@@ -87,9 +98,9 @@ category_averages.append(avg_points_last)
 # Create DataFrame to display results
 category_df = pd.DataFrame({
     'Rank': map(
-        lambda x: f'{rzero((10-x) * category_size)}' +
+        lambda x: f'{rzero((9 - x) * category_size + 1)}' +
         ' - ' + 
-        f'{rzero((9 - x) * category_size + 1)}',
+        f'{rzero((10-x) * category_size)}',
         range(0, 10)
     ),
     'Category': [f'Top {10 * (10 - i)}%' for i in range(num_categories)] + 
@@ -97,7 +108,17 @@ category_df = pd.DataFrame({
     'Average Marks': category_averages
 })
 
-category_df.to_json('./assets/Ranks.json', indent=4)
+ranks_rows = category_df.to_dict(orient='records')
+ranks_new_schema = {
+    "error": None,
+    "data": {
+        "rows": ranks_rows
+    },
+    "status": "ok"
+}
+ranks_json_output = json.dumps(ranks_new_schema, indent=4)
+with open('./assets/Ranks.json', 'w') as json_file:
+    json_file.write(ranks_json_output)
 print(category_df, end='\n--------------\n')
 
 markdown_table = "| Rank | Category | Average Marks |\n"
@@ -137,7 +158,17 @@ freq_df = pd.DataFrame({
     'Freq. Portion': portion_of_freqs
 })
 
-freq_df.to_json('./assets/Histogram.json', indent=4)
+freq_rows = freq_df.to_dict(orient='records')
+freq_new_schema = {
+    "error": None,
+    "data": {
+        "rows": freq_rows
+    },
+    "status": "ok"
+}
+freq_json_output = json.dumps(freq_new_schema, indent=4)
+with open('./assets/Histogram.json', 'w') as json_file:
+    json_file.write(freq_json_output)
 print(freq_df, end='\n--------------\n')
 
 markdown_table = "| Marks | Frequency | Freq. Portion |\n"

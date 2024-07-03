@@ -87,9 +87,22 @@ for row in overlap:
     # Add the "Sum" key to the dictionary
     row['Sum'] = total_sum
 
+# %%
+# -----------------------------------------------------------------------------
 # Save users data
-with open('./assets/Users.json', 'w') as file:
-    json.dump(users, file, indent=4)
+# -----------------------------------------------------------------------------
+users_new_schema = {
+    "error": None,
+    "data": {
+        "rows": users
+    },
+    "status": "ok"
+}
+
+users_json_output = json.dumps(users_new_schema, indent=4)
+
+with open('./assets/Users.json', 'w') as json_file:
+    json_file.write(users_json_output)
 
 markdown_table = "| Date | All TX Fee | Cumulative New Users | Returning Users | Total Active Users | Total New Users | TXs |\n"
 markdown_table += "|------|------------|----------------------|-----------------|--------------------|-----------------|-----|\n"
@@ -101,9 +114,21 @@ for entry in users:
 with open('./markdown/Users.md', 'w') as f:
     f.write(markdown_table)
 
+# -----------------------------------------------------------------------------
 # Save overlap data    
-with open('./assets/Overlap.json', 'w') as file:
-    json.dump(overlap, file, indent=4)
+# -----------------------------------------------------------------------------
+overlap_new_schema = {
+    "error": None,
+    "data": {
+        "rows": overlap
+    },
+    "status": "ok"
+}
+
+overlap_json_output = json.dumps(overlap_new_schema, indent=4)
+
+with open('./assets/Overlap.json', 'w') as json_file:
+    json_file.write(overlap_json_output)
 
 markdown_table = "| Days Category | 01 contract | 02 contracts | 03-05 contracts | 06-10 contracts | 11-20 contracts | 21-50 contracts | 51-100 contracts | Over 100 contracts | Sum   |\n"
 markdown_table += "|---------------|-------------|--------------|-----------------|-----------------|-----------------|-----------------|------------------|--------------------|-------|\n"
@@ -115,9 +140,27 @@ for entry in overlap:
 with open('./markdown/Overlap.md', 'w') as f:
     f.write(markdown_table)
 
+# -----------------------------------------------------------------------------
 # Save contracts data
+# -----------------------------------------------------------------------------
+rows = [
+    {
+        "Used Contracts": key, "Addresses": value
+    } for key, value in contracts.items()
+]
+
+contracts_new_schema = {
+    "error": None,
+    "data": {
+        "rows": rows
+    },
+    "status": "ok"
+}
+
+contracts_json_output = json.dumps(contracts_new_schema, indent=4)
+
 with open('./assets/Contracts.json', 'w') as json_file:
-    json.dump(contracts, json_file, indent=4)
+    json_file.write(contracts_json_output)
 
 markdown_table = "| Contracts          | Count   |\n"
 markdown_table += "|--------------------|---------|\n"
