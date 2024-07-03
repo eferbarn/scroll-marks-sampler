@@ -5,14 +5,14 @@
         "03-05 contracts": 74,
         "06-10 contracts": 186,
         "11-20 contracts": 363,
-        "21-50 contracts": 1541,
-        "51-100 contracts": 1529,
+        "21-50 contracts": 1542,
+        "51-100 contracts": 1530,
         "Over 100 contracts": 347,
         "days_category": "Over 100 days",
-        "Sum": 4137
+        "Sum": 4139
     },
     {
-        "01 contract": 186,
+        "01 contract": 187,
         "02 contracts": 73,
         "03-05 contracts": 718,
         "06-10 contracts": 1242,
@@ -21,78 +21,78 @@
         "51-100 contracts": 5101,
         "Over 100 contracts": 535,
         "days_category": "51-100 days",
-        "Sum": 21917
+        "Sum": 21918
     },
     {
         "01 contract": 950,
         "02 contracts": 963,
-        "03-05 contracts": 3967,
-        "06-10 contracts": 14640,
-        "11-20 contracts": 44321,
-        "21-50 contracts": 62124,
+        "03-05 contracts": 3968,
+        "06-10 contracts": 14638,
+        "11-20 contracts": 44329,
+        "21-50 contracts": 62142,
         "51-100 contracts": 5544,
         "Over 100 contracts": 157,
         "days_category": "21-50 days",
-        "Sum": 132666
+        "Sum": 132691
     },
     {
-        "01 contract": 1632,
-        "02 contracts": 2564,
-        "03-05 contracts": 15923,
-        "06-10 contracts": 74570,
-        "11-20 contracts": 158505,
-        "21-50 contracts": 58439,
+        "01 contract": 1631,
+        "02 contracts": 2562,
+        "03-05 contracts": 15924,
+        "06-10 contracts": 74564,
+        "11-20 contracts": 158529,
+        "21-50 contracts": 58442,
         "51-100 contracts": 1784,
         "Over 100 contracts": 40,
         "days_category": "11-20 days",
-        "Sum": 313457
+        "Sum": 313476
     },
     {
-        "01 contract": 5550,
+        "01 contract": 5549,
         "02 contracts": 10303,
         "03-05 contracts": 91974,
-        "06-10 contracts": 213413,
-        "11-20 contracts": 159730,
-        "21-50 contracts": 24083,
+        "06-10 contracts": 213416,
+        "11-20 contracts": 159766,
+        "21-50 contracts": 24086,
         "51-100 contracts": 819,
         "Over 100 contracts": 0,
         "days_category": "06-10 days",
-        "Sum": 505872
+        "Sum": 505913
     },
     {
-        "01 contract": 49897,
-        "02 contracts": 99011,
-        "03-05 contracts": 222039,
-        "06-10 contracts": 150045,
-        "11-20 contracts": 53331,
-        "21-50 contracts": 5118,
+        "01 contract": 49898,
+        "02 contracts": 99017,
+        "03-05 contracts": 222023,
+        "06-10 contracts": 150043,
+        "11-20 contracts": 53317,
+        "21-50 contracts": 5116,
         "51-100 contracts": 215,
         "Over 100 contracts": 0,
         "days_category": "03-5 days",
-        "Sum": 579656
+        "Sum": 579629
     },
     {
-        "01 contract": 191420,
-        "02 contracts": 69237,
-        "03-05 contracts": 56086,
-        "06-10 contracts": 27755,
-        "11-20 contracts": 7661,
+        "01 contract": 191425,
+        "02 contracts": 69236,
+        "03-05 contracts": 56099,
+        "06-10 contracts": 27748,
+        "11-20 contracts": 7658,
         "21-50 contracts": 702,
         "51-100 contracts": 27,
         "Over 100 contracts": 0,
         "days_category": "02 days",
-        "Sum": 352888
+        "Sum": 352895
     },
     {
-        "01 contract": 117261,
-        "02 contracts": 31290,
-        "03-05 contracts": 33380,
-        "06-10 contracts": 13672,
-        "11-20 contracts": 3273,
+        "01 contract": 117252,
+        "02 contracts": 31275,
+        "03-05 contracts": 33381,
+        "06-10 contracts": 13671,
+        "11-20 contracts": 3278,
         "21-50 contracts": 375,
         "51-100 contracts": 13,
         "Over 100 contracts": 13,
         "days_category": "01 day",
-        "Sum": 199277
+        "Sum": 199258
     }
 ]
