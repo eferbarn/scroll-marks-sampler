@@ -1,12 +1,12 @@
-**147007** addresses have been analyzed through the latest run.
-The average mark score was **~93**.
+![adds](https://img.shields.io/badge/147195-addresses-yellow) have been analyzed through the latest run.
+The average mark score was ![mean](https://img.shields.io/badge/~-93-yellow)
 | Statistic | Value |
 |-----------|-------|
-| count | 147007.0 |
-| mean | 93.55599272112829 |
-| std | 135.9516638706557 |
-| min | 0.0135610216072304 |
-| 25% | 1.1668269873319894 |
-| 50% | 43.883326252874646 |
-| 75% | 134.7563190296609 |
-| max | 908.5460194293872 |
+| count | 147195.0 |
+| mean | 93.58112677666512 |
+| std | 135.99440387958768 |
+| min | 0.0135491138024549 |
+| 25% | 1.1671610595958422 |
+| 50% | 43.87794534429057 |
+| 75% | 134.78545398436927 |
+| max | 908.949977703786 |
