@@ -52,10 +52,12 @@ descriptive_stats.to_json('./assets/Descriptive.json', indent=4)
 print("Descriptive Statistics:")
 print(descriptive_stats, end='\n--------------\n')
 
-
-markdown_table = f"**{int(descriptive_stats['count'])}** addresses have " + "been analyzed through the latest run.\n"
+markdown_table = f"![adds](https://img.shields.io/badge/" \
+f"{int(descriptive_stats['count'])}" + "-addresses-yellow)" \
+" have been analyzed through the latest run.\n"
 markdown_table += "The average mark score was " \
-f"**~{int(descriptive_stats['mean'])}**.\n"
+f"![mean](https://img.shields.io/badge/~-{int(descriptive_stats['mean'])}-" \
+"yellow)\n"
 markdown_table += "| Statistic | Value |\n"
 markdown_table += "|-----------|-------|\n"
 

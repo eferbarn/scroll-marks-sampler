@@ -63,6 +63,10 @@ jobs:
       id: analyzer
       run: python 2_analyzer.py
 
+    - name: Markdown module
+      id: markdown
+      run: python 3_markdown.py
+
     - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
