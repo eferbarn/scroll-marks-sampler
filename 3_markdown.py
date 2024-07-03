@@ -1,6 +1,7 @@
 
 # %%
 import os
+import json
 import requests
 from dotenv import load_dotenv
 
@@ -15,7 +16,13 @@ headers = {
     "authorization": f"Basic {ZERION_API_KEY}"
 }
 
-response = requests.get(url, headers=headers).json()['data']
+try:
+    response = requests.get(url, headers=headers).json()["data"]
+except KeyError as e:
+    print(f"KeyError occurred during running the module (Key:{e})")
+    with open("./assets/Scroll.json", "r") as f:
+        response = json.load(f)["data"]
+
 
 logo = response['attributes']['icon']['url']
 explorer = response['attributes']['explorer']['home_url']

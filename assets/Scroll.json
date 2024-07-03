@@ -1,0 +1,55 @@
+{
+  "links": {
+    "self": "https://api.zerion.io/v1/chains/scroll"
+  },
+  "data": {
+    "type": "chains",
+    "id": "scroll",
+    "attributes": {
+      "external_id": "0x82750",
+      "name": "Scroll",
+      "icon": {
+        "url": "https://chain-icons.s3.amazonaws.com/scroll.png"
+      },
+      "explorer": {
+        "name": "Scrollscan",
+        "token_url_format": "https://scrollscan.com/token/{ADDRESS}",
+        "tx_url_format": "https://scrollscan.com/tx/{HASH}",
+        "home_url": "https://scrollscan.com"
+      },
+      "rpc": {
+        "public_servers_url": [
+          "https://rpc.scroll.io",
+          "https://rpc-scroll.icecreamswap.com",
+          "https://rpc.ankr.com/scroll",
+          "https://scroll-mainnet.chainstacklabs.com"
+        ]
+      },
+      "flags": {
+        "supports_trading": true,
+        "supports_sending": true,
+        "supports_bridge": true
+      }
+    },
+    "relationships": {
+      "native_fungible": {
+        "links": {
+          "related": "https://api.zerion.io/v1/fungibles/eth"
+        },
+        "data": {
+          "type": "fungibles",
+          "id": "eth"
+        }
+      },
+      "wrapped_native_fungible": {
+        "links": {
+          "related": "https://api.zerion.io/v1/fungibles/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+        },
+        "data": {
+          "type": "fungibles",
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+        }
+      }
+    }
+  }
+}
