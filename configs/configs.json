@@ -1,5 +1,5 @@
 {
-  "Address_Limit": 10,
+  "Address_Limit": 200,
   "Outlier_Factor": 0.01,
   "Cooldown": 0.01,
   "Dune_Cooldown": 10
