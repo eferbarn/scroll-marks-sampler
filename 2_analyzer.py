@@ -114,8 +114,8 @@ with open('./markdown/Ranks.md', 'w') as f:
 axis_bins = list(
     range(
         0,
-        int(descriptive_stats['max']) + 50,
-        50
+        int(descriptive_stats['max']) + 200,
+        200
     )
 )
 bins_count = 50
