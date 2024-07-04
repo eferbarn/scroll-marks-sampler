@@ -46,9 +46,6 @@ with open("./markdown/Overlap.md", "r") as f:
 with open("./markdown/Ranks.md", "r") as f:
     ranks = f.read()
 
-with open("./markdown/Ranks.md", "r") as f:
-    ranks = f.read()
-
 with open("./markdown/Users.md", "r") as f:
     users = f.read()
 
