@@ -3,54 +3,54 @@
     "data": {
         "rows": [
             {
-                "Rank": "179911 - 199900",
+                "Rank": "179956 - 199950",
                 "Category": "Top 100%",
-                "Average Marks": 0.1176449289881261
+                "Average Marks": 0.11879048022746323
             },
             {
-                "Rank": "159921 - 179910",
+                "Rank": "159961 - 179955",
                 "Category": "Top 90%",
-                "Average Marks": 0.5067605890153055
+                "Average Marks": 0.5404429508694335
             },
             {
-                "Rank": "139931 - 159920",
+                "Rank": "139966 - 159960",
                 "Category": "Top 80%",
-                "Average Marks": 1.3902908227518846
+                "Average Marks": 1.5427931017101828
             },
             {
-                "Rank": "119941 - 139930",
+                "Rank": "119971 - 139965",
                 "Category": "Top 70%",
-                "Average Marks": 4.260281209654625
+                "Average Marks": 4.786538997519055
             },
             {
-                "Rank": "099951 - 119940",
+                "Rank": "099976 - 119970",
                 "Category": "Top 60%",
-                "Average Marks": 18.60280409848107
+                "Average Marks": 18.62622015769201
             },
             {
-                "Rank": "079961 - 099950",
+                "Rank": "079981 - 099975",
                 "Category": "Top 50%",
-                "Average Marks": 56.894818508014325
+                "Average Marks": 56.33969768460789
             },
             {
-                "Rank": "059971 - 079960",
+                "Rank": "059986 - 079980",
                 "Category": "Top 40%",
-                "Average Marks": 91.91975574253114
+                "Average Marks": 92.00714141325678
             },
             {
-                "Rank": "039981 - 059970",
+                "Rank": "039991 - 059985",
                 "Category": "Top 30%",
-                "Average Marks": 138.85154366452898
+                "Average Marks": 139.8190170825321
             },
             {
-                "Rank": "019991 - 039980",
+                "Rank": "019996 - 039990",
                 "Category": "Top 20%",
-                "Average Marks": 214.96258664703996
+                "Average Marks": 217.86978536164185
             },
             {
-                "Rank": "000001 - 019990",
+                "Rank": "000001 - 019995",
                 "Category": "Top 10%",
-                "Average Marks": 885.4545515218582
+                "Average Marks": 1127.045854959519
             }
         ]
     },
