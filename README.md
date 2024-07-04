@@ -156,4 +156,4 @@ The average mark score was ![mean](https://img.shields.io/badge/~-107-yellow)
 Hope you enjoy it!
 Made with ❤️ Powered by Flipside, Dune, and Zerion!
 
-[![MEHDI](https://img.shields.io/badge/M%CE%9EHDI-from%20Zerion-darkblue)](https://flipsidecrypto.xyz/efer/)
+[![MEHDI](https://img.shields.io/badge/M%CE%9EHDI-Zerion-darkblue)](https://flipsidecrypto.xyz/efer/)
