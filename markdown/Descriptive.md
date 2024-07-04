@@ -1,12 +1,12 @@
-![adds](https://img.shields.io/badge/199899-addresses-yellow) have been analyzed through the latest run.
-The average mark score was ![mean](https://img.shields.io/badge/~-107-yellow)
+![adds](https://img.shields.io/badge/199900-addresses-yellow) have been analyzed through the latest run.
+The average mark score was ![mean](https://img.shields.io/badge/~-110-yellow)
 | Statistic | Value |
 |-----------|-------|
-| count | 199899.0 |
-| mean | 107.93606307351135 |
-| std | 219.47412162102165 |
-| min | 0.0 |
-| 25% | 1.1956776699328957 |
-| 50% | 42.4936028422984 |
-| 75% | 137.38448922256512 |
-| max | 8233.978030063483 |
+| count | 199900.0 |
+| mean | 110.42729887779409 |
+| std | 242.0085846332985 |
+| min | 4.452769839233821e-06 |
+| 25% | 1.3263534511665358 |
+| 50% | 41.09066676462169 |
+| 75% | 138.077265594815 |
+| max | 9638.433009714976 |
