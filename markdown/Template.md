@@ -48,4 +48,4 @@ An automated repository that samples ~50k active addresses from the scroll netwo
 Hope you enjoy it!
 Made with ❤️ Powered by Flipside, Dune, and Zerion!
 
-[![MEHDI](https://img.shields.io/badge/M%CE%9EHDI-from%20Zerion-darkblue)](https://flipsidecrypto.xyz/efer/)
+[![MEHDI](https://img.shields.io/badge/M%CE%9EHDI-Zerion-darkblue)](https://flipsidecrypto.xyz/efer/)
