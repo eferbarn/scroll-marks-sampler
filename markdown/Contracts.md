@@ -1,10 +1,10 @@
 | Contracts          | Count   |
 |--------------------|---------|
-| 01 contract | 413559 |
-| 02 contracts | 207929 |
-| 03-05 contracts | 382345 |
-| 06-10 contracts | 390595 |
-| 11-20 contracts | 471276 |
-| 21-50 contracts | 393975 |
-| 51-100 contracts | 74304 |
-| Over 100 contracts | 13246 |
+| 01 contract | 418657 |
+| 02 contracts | 207642 |
+| 03-05 contracts | 382305 |
+| 06-10 contracts | 387172 |
+| 11-20 contracts | 472679 |
+| 21-50 contracts | 400355 |
+| 51-100 contracts | 75324 |
+| Over 100 contracts | 13369 |
