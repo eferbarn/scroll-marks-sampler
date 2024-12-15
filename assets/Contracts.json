@@ -4,35 +4,35 @@
         "rows": [
             {
                 "Used Contracts": "01 contract",
-                "Addresses": 460070
+                "Addresses": 487940
             },
             {
                 "Used Contracts": "02 contracts",
-                "Addresses": 208858
+                "Addresses": 210806
             },
             {
                 "Used Contracts": "03-05 contracts",
-                "Addresses": 380295
+                "Addresses": 382257
             },
             {
                 "Used Contracts": "06-10 contracts",
-                "Addresses": 387268
+                "Addresses": 386343
             },
             {
                 "Used Contracts": "11-20 contracts",
-                "Addresses": 474888
+                "Addresses": 476632
             },
             {
                 "Used Contracts": "21-50 contracts",
-                "Addresses": 406350
+                "Addresses": 409599
             },
             {
                 "Used Contracts": "51-100 contracts",
-                "Addresses": 76107
+                "Addresses": 76663
             },
             {
                 "Used Contracts": "Over 100 contracts",
-                "Addresses": 13512
+                "Addresses": 13662
             }
         ]
     },
