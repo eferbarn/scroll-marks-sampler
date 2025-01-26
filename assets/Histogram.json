@@ -4,18 +4,18 @@
         "rows": [
             {
                 "Marks": 6142.820625,
-                "Frequency": 199513,
-                "Freq. Portion": 99.77445940269249
+                "Frequency": 199524,
+                "Freq. Portion": 99.77996039287072
             },
             {
                 "Marks": 12285.64125,
-                "Frequency": 224,
-                "Freq. Portion": 0.1120201636294533
+                "Frequency": 216,
+                "Freq. Portion": 0.10801944349982998
             },
             {
                 "Marks": 18428.461875,
-                "Frequency": 78,
-                "Freq. Portion": 0.03900702126382749
+                "Frequency": 74,
+                "Freq. Portion": 0.03700666119901582
             },
             {
                 "Marks": 24571.2825,
@@ -24,18 +24,18 @@
             },
             {
                 "Marks": 30714.103125,
-                "Frequency": 20,
-                "Freq. Portion": 0.01000180032405833
+                "Frequency": 23,
+                "Freq. Portion": 0.011502070372667081
             },
             {
                 "Marks": 36856.92375,
-                "Frequency": 15,
-                "Freq. Portion": 0.007501350243043747
+                "Frequency": 16,
+                "Freq. Portion": 0.008001440259246664
             },
             {
                 "Marks": 42999.744375,
-                "Frequency": 7,
-                "Freq. Portion": 0.0035006301134204157
+                "Frequency": 6,
+                "Freq. Portion": 0.003000540097217499
             },
             {
                 "Marks": 49142.565,
@@ -44,8 +44,8 @@
             },
             {
                 "Marks": 55285.385625,
-                "Frequency": 9,
-                "Freq. Portion": 0.004500810145826249
+                "Frequency": 10,
+                "Freq. Portion": 0.005000900162029165
             },
             {
                 "Marks": 61428.20625,
@@ -59,33 +59,33 @@
             },
             {
                 "Marks": 73713.8475,
-                "Frequency": 3,
-                "Freq. Portion": 0.0015002700486087496
-            },
-            {
-                "Marks": 79856.668125,
-                "Frequency": 4,
-                "Freq. Portion": 0.002000360064811666
-            },
-            {
-                "Marks": 85999.48875,
                 "Frequency": 5,
                 "Freq. Portion": 0.0025004500810145826
             },
             {
+                "Marks": 79856.668125,
+                "Frequency": 2,
+                "Freq. Portion": 0.001000180032405833
+            },
+            {
+                "Marks": 85999.48875,
+                "Frequency": 3,
+                "Freq. Portion": 0.0015002700486087496
+            },
+            {
                 "Marks": 92142.30937500001,
-                "Frequency": 1,
-                "Freq. Portion": 0.0005000900162029165
+                "Frequency": 2,
+                "Freq. Portion": 0.001000180032405833
             },
             {
                 "Marks": 98285.13,
-                "Frequency": 1,
-                "Freq. Portion": 0.0005000900162029165
+                "Frequency": 0,
+                "Freq. Portion": 0.0
             },
             {
                 "Marks": 104427.950625,
-                "Frequency": 2,
-                "Freq. Portion": 0.001000180032405833
+                "Frequency": 1,
+                "Freq. Portion": 0.0005000900162029165
             },
             {
                 "Marks": 110570.77125,
@@ -94,8 +94,8 @@
             },
             {
                 "Marks": 116713.59187500001,
-                "Frequency": 3,
-                "Freq. Portion": 0.0015002700486087496
+                "Frequency": 4,
+                "Freq. Portion": 0.002000360064811666
             },
             {
                 "Marks": 122856.4125,
@@ -104,8 +104,8 @@
             },
             {
                 "Marks": 128999.233125,
-                "Frequency": 2,
-                "Freq. Portion": 0.001000180032405833
+                "Frequency": 1,
+                "Freq. Portion": 0.0005000900162029165
             },
             {
                 "Marks": 135142.05375000002,
@@ -129,8 +129,8 @@
             },
             {
                 "Marks": 159713.33625,
-                "Frequency": 0,
-                "Freq. Portion": 0.0
+                "Frequency": 1,
+                "Freq. Portion": 0.0005000900162029165
             },
             {
                 "Marks": 165856.15687500002,
@@ -149,8 +149,8 @@
             },
             {
                 "Marks": 184284.61875000002,
-                "Frequency": 1,
-                "Freq. Portion": 0.0005000900162029165
+                "Frequency": 0,
+                "Freq. Portion": 0.0
             },
             {
                 "Marks": 190427.43937500002,
@@ -169,8 +169,8 @@
             },
             {
                 "Marks": 208855.90125,
-                "Frequency": 1,
-                "Freq. Portion": 0.0005000900162029165
+                "Frequency": 0,
+                "Freq. Portion": 0.0
             },
             {
                 "Marks": 214998.72187500002,
@@ -179,8 +179,8 @@
             },
             {
                 "Marks": 221141.5425,
-                "Frequency": 0,
-                "Freq. Portion": 0.0
+                "Frequency": 1,
+                "Freq. Portion": 0.0005000900162029165
             },
             {
                 "Marks": 227284.363125,
